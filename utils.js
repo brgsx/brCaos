@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Gera a URL de indicação com o e-mail do usuário atual codificado
                 document.getElementById('myForm').style.display = "none"
                 document.getElementById("response").style.display= "block"
-                document.getElementById("linkToCopy").style.display= "block"
                 const refLink = `https://br.caos.wtf/?vemcausar=${btoa(email)}`;
                 let responseText = `Dados enviados com sucesso!`;
                 let linktToCopyText =  `${refLink}`;
