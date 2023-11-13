@@ -56,11 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       const email = document.getElementById("email").value;
+      var dataAtual = new Date();
+      var dataCadastro = JSON.stringify(dataAtual);
 
       const formData = {
         form: {
           usuário: {
-            dataCadastro: Date.now().toString(),
+            dataCadastro: dataCadastro,
             id: email,
             nome: document.getElementById("nome").value,
             email: document.getElementById("email").value,
