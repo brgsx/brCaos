@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
           responseDiv.style.display = "block";
 
           // Atualiza o link para copiar e a mensagem de sucesso
-          const refLink = `https://br.caos.wtf/?vemcausar=${btoa(email)}`;
+          const refLink = `https://caos.wtf/?vemcausar=${btoa(email)}`;
           let responseText = `Dados enviados com sucesso! <br>Compartilhe este link e concorra a prêmios`;
           responseDiv.innerHTML = `
                         <span>${responseText}</span>
