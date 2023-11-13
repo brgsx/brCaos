@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = {
                 "form": {
                     "usuário": {
-                        dataCadastro: Date.now(),
+                        dataCadastro: Date.now().toString(),
                         id: btoa(document.getElementById("email").value),
                         nome: document.getElementById("nome").value,
                         email: document.getElementById("email").value,
@@ -74,8 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('myForm').style.display = "none"
                 document.getElementById("response").style.display="block"
                 const refLink = `https://br.caos.wtf/?vemcausar=${btoa(email)}`;
-                let responseText = `Dados enviados com sucesso! No dia do caos você vai querer estar acompanhado, indique um amigo e ganhe prêmios no dia do evento: ${refLink}`;
+                let responseText = `Dados enviados com sucesso!`;
+                let linktToCopyText =  `No dia do caos você vai querer estar acompanhado, convide um amigo: ${refLink}`;
                 document.getElementById("response").textContent = responseText;
+                document.getElementById("linkToCopy").textContent = linktToCopyText;
                 })
                 .catch((error) => {
                   console.error("Error:", error);
@@ -83,3 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+function copyLink() {
+    var link = document.getElementById("linkToCopy").innerText;
+    navigator.clipboard.writeText(link);
+    // Adicionar feedback de link copiado, se desejado
+  }
