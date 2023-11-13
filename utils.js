@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Atualiza o link para copiar e a mensagem de sucesso
           const refLink = `https://br.caos.wtf/?vemcausar=${btoa(email)}`;
-          let responseText = `Dados enviados com sucesso!`;
+          let responseText = `Dados enviados com sucesso!!!`;
           responseDiv.innerHTML = `
                         <span>${responseText}</span>
                         <div class="mt-4 flex justify-between items-center">
