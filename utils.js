@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("response").style.display= "block"
                 const refLink = `https://br.caos.wtf/?vemcausar=${btoa(email)}`;
                 let responseText = `Dados enviados com sucesso!`;
-                let linktToCopyText =  `${refLink}`;
+                let linktToCopyText =  refLink;
                 document.getElementById("response").textContent = responseText;
                 document.getElementById("linkToCopy").textContent = linktToCopyText;
                 })
