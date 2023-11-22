@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
           let responseText = `Dados enviados com sucesso! <br>Compartilhe este link e concorra a prêmios`;
           responseDiv.innerHTML = `
                         <span>${responseText}</span>
-                        <div class="mt-4 flex justify-between items-center">
+                        <div class="mt-4 flex flex-col justify-between items-center">
                             <span id="linkToCopy" class="text-blue-500 hover:text-blue-700 cursor-pointer">${refLink}</span>
-                            <button onclick="copyLink()" class="bg-black-500 hover:bg-blue-700 text-green-500 font-bold py-2 px-4 rounded">Copiar Link</button>
+                            <button onclick="copyLink()" class="bg-black-500 hover:bg-blue-700 text-green-500 font-bold py-2 px-4 rounded">Copiar</button>
                         </div>
                     `; // Inclui a mensagem de sucesso e o novo link
         })
